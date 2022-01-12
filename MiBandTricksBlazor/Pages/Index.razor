@@ -1,0 +1,103 @@
+﻿@page "/"
+@page "/MiBandTricks"
+@inject NavigationManager NavManager
+
+<div class="articles">
+    <MatCard class="demo-mat-card" @onclick="@(() => onPostClicked("MiBand6WithNfc"))" Style="cursor:pointer;">
+        <MatCardContent>
+            <MatCardMedia Wide="true" ImageUrl="/Content/Images/Posts/MiBand6.jpg"></MatCardMedia>
+            <div class="demo-mat-card-content">
+                <MatHeadline6 class="demo-mat-card-clean-margin">
+                    Realiza pagos con la Mi Band 6
+                </MatHeadline6>
+            </div>
+            <MatBody2 class="demo-mat-card-content demo-mat-card-clean-margin">
+                La Xiaomi Mi Band 6 con NFC llega a España. Realiza pagos con una tarjeta MasterCard.
+            </MatBody2>
+        </MatCardContent>
+    </MatCard>
+
+    <MatCard class="demo-mat-card" @onclick="@(() => onPostClicked("StockNotifierApp"))" Style="cursor:pointer;">
+        <MatCardContent>
+            <MatCardMedia Wide="true" ImageUrl="/Content/Images/Posts/stockPricess.jpg"></MatCardMedia>
+            <div class="demo-mat-card-content">
+                <MatHeadline6 class="demo-mat-card-clean-margin">
+                    Aplicación StockNotifier
+                </MatHeadline6>
+            </div>
+            <MatBody2 class="demo-mat-card-content demo-mat-card-clean-margin">
+                Recibe notificaciones de bolsa en tu Xiaomi Mi Band. Configura alertas y el intervalo de notificación.
+            </MatBody2>
+        </MatCardContent>
+    </MatCard>
+
+    <MatCard class="demo-mat-card" @onclick="@(() => onPostClicked("ChineseMiBandUpdate"))" Style="cursor:pointer;">
+        <MatCardContent>
+            <MatCardMedia Wide="true" ImageUrl="/Content/Images/Posts/MiBandPic.png"></MatCardMedia>
+            <div class="demo-mat-card-content">
+                <MatHeadline6 class="demo-mat-card-clean-margin">
+                    Actualización de la Xiaomi Mi Band 5
+                </MatHeadline6>
+            </div>
+            <MatBody2 class="demo-mat-card-content demo-mat-card-clean-margin">
+                La Mi Band 5 se actualiza en la versión china con importantes mejoras.
+            </MatBody2>
+        </MatCardContent>
+    </MatCard>
+
+    <MatCard class="demo-mat-card" @onclick="@(() => onPostClicked("LocationBaseAlerts"))" Style="cursor:pointer;">
+        <MatCardContent>
+            <MatCardMedia Wide="true" ImageUrl="/Content/Images/Posts/MiBandPic2.png"></MatCardMedia>
+            <div class="demo-mat-card-content">
+                <MatHeadline6 class="demo-mat-card-clean-margin">
+                    Recordatorios basados en la ubicación
+                </MatHeadline6>
+            </div>
+            <MatBody2 class="demo-mat-card-content demo-mat-card-clean-margin">
+                Haz que la pulsera te ayude con la lista de la compra al llegar al súper.
+            </MatBody2>
+        </MatCardContent>
+    </MatCard>
+
+    <MatCard class="demo-mat-card" @onclick="@(() => onPostClicked("StravaSync"))" Style="cursor:pointer;">
+        <MatCardContent>
+            <MatCardMedia Wide="true" ImageUrl="/Content/Images/Posts/AmazfitBip.png"></MatCardMedia>
+            <div class="demo-mat-card-content">
+                <MatHeadline6 class="demo-mat-card-clean-margin">
+                    Conecta con Strava
+                </MatHeadline6>
+            </div>
+            <MatBody2 class="demo-mat-card-content demo-mat-card-clean-margin">
+                Empareja tu Mi Band con la cuenta de Strava y sincroniza tus entrenamientos.
+            </MatBody2>
+        </MatCardContent>
+    </MatCard>
+</div>
+
+
+@code{
+    void onPostClicked(string postName)
+    {
+        if (postName.Equals("StockNotifierApp"))
+        {
+            NavManager.NavigateTo("/StockNotifierApp");
+        }
+        else if (postName.Equals("ChineseMiBandUpdate"))
+        {
+            NavManager.NavigateTo("/ChineseMiBandUpdate");
+        }
+        else if (postName.Equals("LocationBaseAlerts"))
+        {
+            NavManager.NavigateTo("/LocationBasedAlerts");
+        }
+        else if (postName.Equals("StravaSync"))
+        {
+            NavManager.NavigateTo("/StravaSync");
+        }
+        else if (postName.Equals("MiBand6WithNfc"))
+        {
+            NavManager.NavigateTo("/MiBand6WithNfc");
+        }
+    }
+}
+

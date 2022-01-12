@@ -1,0 +1,52 @@
+﻿@inherits LayoutComponentBase
+@using Microsoft.JSInterop
+@using MiBandTricksBlazor.Utils;
+@inject IJSRuntime JSRuntime
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="author" content="mibandtricks.com" />
+    <meta name="description" content="Mi Band: las mejores noticias, aplicaciones y trucos sobre la pulsera." />
+</head>
+
+<div class="sidebar">
+    <NavMenu />
+</div>
+
+<div class="main">
+    <div class="top-row px-4">
+        <TopMenu />
+    </div>
+
+    <div class="content px-4">
+        <div class="bodyContent">
+            @Body
+        </div>
+        <aside>
+        </aside>
+    </div>
+    @*<div id="disqus_thread"></div>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>*@
+    <a href="https://localhost:5001/fetchdata#disqus_thread"></a>.
+    <div @ref="@disqusBody">
+        <div id="disqus_thread"></div>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+</div>
+
+@functions {
+    private ElementReference disqusBody;
+
+    protected override async Task
+         OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await DisqusInterop.CreateDisqus(
+                JSRuntime,
+                disqusBody,
+                @$"https://mibandtricks.disqus.com/embed.js");
+            
+        }
+    }
+}
