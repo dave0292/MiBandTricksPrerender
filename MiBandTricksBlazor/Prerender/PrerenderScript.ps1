@@ -1,9 +1,10 @@
+#Readme: must be executed on the project directory, where the csproj is placed.
 If(Test-Path .\Prerender\output)
 {
     Remove-Item -Path .\Prerender\output -Recurse
 }
  
-dotnet publish .\Client\BlazorWasmPrerender.csproj -c Release -o Prerender/output --nologo
+dotnet publish MiBandTricksBlazor.csproj -c Release -o Prerender/output --nologo
 Push-Location .\Prerender
 npx react-snap
 Get-ChildItem ".\output\wwwroot\*.html" -Recurse | ForEach-Object { 
