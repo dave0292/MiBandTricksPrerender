@@ -17,11 +17,11 @@ jobs:
     - name: Setup .NET Core SDK
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: 5.0.101
+        dotnet-version: 5.0.401
  
     # publishes Blazor project to the Prerender/output folder
     - name: Publish .NET Core Project
-      run: dotnet publish MiBandTricksPrerender/MiBandTricksBlazor.csproj -c Release -o Prerender/output --nologo
+      run: dotnet publish MiBandTricksBlazor.csproj -c Release -o Prerender/output --nologo
     
     # Use NodeJS react-snap utitility to prerender static website
     - name: prerender Blazor client
