@@ -2,12 +2,12 @@
   "cacheBootResources": true,
   "config": [ ],
   "debugBuild": false,
-  "entryAssembly": "MiBandTricksBlazor",
+  "entryAssembly": "MiBandTricksPrerender",
   "linkerEnabled": true,
   "resources": {
     "assembly": {
       "MatBlazor.dll": "sha256-EYcr++CC2qJC\/EGv+yjHTTsM8fbEfFJ2VZvKAVgCLt4=",
-      "MiBandTricksBlazor.dll": "sha256-B49+hqw+yPJ8bMWSmG24kcNo3luSHvaR6J00w49SECo=",
+      "MiBandTricksPrerender.dll": "sha256-B49+hqw+yPJ8bMWSmG24kcNo3luSHvaR6J00w49SECo=",
       "Microsoft.AspNetCore.Components.dll": "sha256-9xnTc85WmZMYePkMikJLU+UDhrkQS8WREYqowYy3+\/0=",
       "Microsoft.AspNetCore.Components.Forms.dll": "sha256-XklIplPderZpWjX9VGSlAQg2LJ8CWGrGpVJfgvatf\/I=",
       "Microsoft.AspNetCore.Components.Web.dll": "sha256-h8Oc6pVWgKn\/DzQdjl9Sm2Pf6FIO8BnMn0F+HSegrZ4=",

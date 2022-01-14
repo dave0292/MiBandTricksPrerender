@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace MiBandTricksBlazor.Shared.GoogleAdSense
+namespace MiBandTricksPrerender.Shared.GoogleAdSense
 {
     public class DisplayInArticleAdConfiguration
     {

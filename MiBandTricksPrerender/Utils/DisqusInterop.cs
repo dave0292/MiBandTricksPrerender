@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Components;
 using Microsoft.JSInterop;
 using System.Threading.Tasks;
 
-namespace MiBandTricksBlazor.Utils
+namespace MiBandTricksPrerender.Utils
 {
     public static class DisqusInterop
     {
