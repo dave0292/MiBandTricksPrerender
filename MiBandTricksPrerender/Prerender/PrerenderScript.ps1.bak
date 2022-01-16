@@ -4,7 +4,7 @@ If(Test-Path .\Prerender\output)
     Remove-Item -Path .\Prerender\output -Recurse
 }
  
-dotnet publish MiBandTricksPrerender.csproj -c Release -o Prerender/output --nologo
+dotnet publish MiBandTricksPrerender.csproj -c Release -o output --nologo
 Push-Location .\Prerender
 npx react-snap
 Get-ChildItem ".\output\wwwroot\*.html" -Recurse | ForEach-Object { 
